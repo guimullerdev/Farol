@@ -49,7 +49,7 @@ Any code that computes average price, profit/loss, yield, or income tax must fol
 - `run` — launch and drive the Electron app to see a renderer/UI change actually working, not just typecheck/tests.
 - `verify` — after a non-trivial change to the renderer or main process, exercise the affected flow end-to-end before calling it done.
 - `code-review` / `simplify` — run on the diff before opening a PR: correctness review and reuse/simplification cleanup.
-- `commit-message` — use when staging changes and writing the commit message (`.claude/skills/commit-message/SKILL.md`).
+- `commit-message` — **always** invoke this before writing any commit message on this repo (`.claude/skills/commit-message/SKILL.md`). Never freehand a commit message here.
 
 ## GitHub
 `gh` CLI is fine to use for repo actions on this project — opening/reviewing PRs, filing issues, checking CI runs, reading past PR discussion for context. Still confirm before anything visible to others (opening a PR, commenting, pushing) per the base git safety rules; `gh` being allowed doesn't waive that.
