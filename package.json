@@ -1,0 +1,44 @@
+{
+  "name": "farol",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Assistente desktop de investimentos para iniciantes no mercado brasileiro",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn workspace @farol/desktop dev",
+    "build": "yarn workspace @farol/desktop build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "pretest:e2e": "yarn workspace @farol/desktop exec electron-vite build",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc --build",
+    "lint": "eslint . && prettier --check .",
+    "lint:fix": "eslint . --fix && prettier --write .",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "@playwright/test": "^1.48.0",
+    "eslint": "^9.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^17.7.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.2.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.13.0",
+    "vitest": "^2.1.4"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,cjs,mjs}": [
+      "eslint --fix"
+    ],
+    "*.{ts,tsx,js,cjs,mjs,json,md,html,css}": [
+      "prettier --write"
+    ]
+  }
+}
