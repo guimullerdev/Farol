@@ -23,6 +23,10 @@ Allowed `type`: `feat`, `fix`, `test`, `refactor`, `chore`, `docs`, `perf`, `bui
 Pick the scope from the touched package/app when it disambiguates: `db`, `scraper`,
 `llm-pipeline`, `shared`, `desktop`. Skip the scope if the change spans several.
 
+Subject line (the `<type>(<scope>): <summary>` line) must be **65 characters or fewer**.
+If it doesn't fit, cut the summary down — don't move detail into the body just to dodge
+the limit.
+
 ## Rules specific to this repo
 
 - Message text in English — see the Language convention in `CLAUDE.md`.
